@@ -2,10 +2,10 @@
 # i3wm #
 
 <p align="center">
-<img alt="Logo" src="assets/banner.svg" style="width:95%; height:120px;">
+<img alt="Logo" src="assets/banner.svg" style="width:80%; height:100px;">
 </p>
 
-i3 window manager configuration files and scriptsr.
+i3 window manager configuration files and scripts.
 
 * * * 
 
