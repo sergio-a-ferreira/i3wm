@@ -351,7 +351,7 @@ for_window [class=Pcmanfm] focus
 #
 # picom: https://wiki.archlinux.org/title/Picom
 # manpage: https://man.archlinux.org/man/picom.1.en
-exec --no-startup-id picom -b
+exec --no-startup-id picom -b -c
 
 #############################################
 # autostart applications/services on login: #
@@ -377,14 +377,14 @@ exec --no-startup-id dex --autostart --environment i3
 #exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
 
 # start conky:
-#exec_always --no-startup-id conky
+exec_always --no-startup-id conky -c ~/.conky/victorConky/LinuxSmall
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
-exec --no-startup-id sleep 2 && nitrogen --restore
+exec --no-startup-id sleep 1 && nitrogen --restore
 #exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros_i3.png
 
 # set powersavings for display:
@@ -470,11 +470,11 @@ set $lyellow	#E1B700
 
 
 # define colors for windows:
-#class		        		border		bground		text		indicator	child_border
-client.focused			   	$lyellow	$dyellow	$lorange	$dbrown		$lyellow
-client.unfocused		   	$lorange	$dorange	$dyellow	$dbrown		$lorange
-client.focused_inactive		$lorange	$dorange	$dyellow	$dbrown		$lorange
-client.urgent		    	$grey 		$dgrey		$white		$dbrown		$grey
+#class		        		border	bground	text		indicator	child_border
+client.focused			  	$lyellow	$dyellow	$lorange	$dbrown		$lyellow
+client.unfocused		  	$lorange	$dorange	$dyellow	$dbrown		$lorange
+client.focused_inactive	$lorange	$dorange	$dyellow	$dbrown		$lorange
+client.urgent		    	$grey 	$dgrey	$white	$dbrown		$grey
 
 ############################################
 # bar settings (input comes from i3blocks) #
@@ -527,3 +527,4 @@ bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 bindsym $mod+t exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
 #bindsym F10 exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
+
